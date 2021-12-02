@@ -14,3 +14,75 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+
+
+.main{
+  width: 100%;
+  padding: 0 30px;
+  max-width: 1700px;
+  margin: 40px auto 0 auto;
+  margin-top: 40px;
+  min-width: 1000px;
+  width: 100%;
+
+}
+
+.top{
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr 1fr 1fr 1fr;
+  padding: 16px 0;
+  background-color: rgb(240, 240, 240);
+  border-radius: 2px;
+  position: sticky;
+  top: 0;
+
+
+}
+
+.topHeadings:first-child{
+  padding-left: 16px;
+}
+
+
+
+.topHeadings:last-child{
+  padding-right: 16px;
+}
+
+
+.cont{
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr 1fr 1fr 1fr;
+  padding: 16px 0;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  width: 100%;
+}
+
+.rank{
+  padding-left: 16px;
+
+}
+
+.marketCap{
+  padding-right: 16px;
+
+}
+
+
+.coinLogo{
+  width: 30px;
+}
+
+
+.gg{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.numbers{
+  display: flex;
+  align-items: center;
+}
