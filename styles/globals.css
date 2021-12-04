@@ -33,10 +33,11 @@ a {
   display: grid;
   grid-template-columns: 70px 1fr 1fr 1fr 1fr 1fr;
   padding: 16px 0;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(243, 243, 243);
   border-radius: 2px;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid rgb(226, 226, 226);
 
 
 }
@@ -58,6 +59,7 @@ a {
   padding: 16px 0;
   border-bottom: 1px solid rgb(228, 228, 228);
   width: 100%;
+  cursor: pointer;
 }
 
 .rank{
@@ -86,3 +88,4 @@ a {
   display: flex;
   align-items: center;
 }
+
