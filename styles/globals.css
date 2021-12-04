@@ -29,6 +29,7 @@ a {
 
 }
 
+
 .top{
   display: grid;
   grid-template-columns: 70px 1fr 1fr 1fr 1fr 1fr;
@@ -60,8 +61,12 @@ a {
   border-bottom: 1px solid rgb(228, 228, 228);
   width: 100%;
   cursor: pointer;
+  transition: 0.2s;
 }
 
+.cont:hover{
+  background-color: rgba(238, 238, 238, 0.247);
+}
 .rank{
   padding-left: 16px;
 
@@ -89,3 +94,58 @@ a {
   align-items: center;
 }
 
+
+
+.singleCurrencyCont{
+  width: 100%;
+  margin: 40px 0 0 0;
+  padding: 0 30px;
+
+}
+
+
+.rankSingleCurrency{
+  padding: 4px 5px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: fit-content;
+  margin-bottom: 20px;
+
+}
+
+
+.singleCurrencyCont img{
+  width: 100px;
+}
+
+.priceSingle{
+  font-size: 38px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  opacity: 0.8;
+
+}
+
+
+.singleFlex{
+  display: flex;
+  align-content: center;
+  gap: 15px;
+
+}
+
+.singleName{
+  margin-top: 35px;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+
+.singleSymbol{
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
+}

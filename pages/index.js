@@ -1,7 +1,7 @@
 
 import Head from 'next/head'
 import Link from 'next/link';
-
+// {`${getCoin.name.toLowerCase().replace(/\s+/g, '-')}`}
 
 export async function getStaticProps() {
   const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
@@ -64,8 +64,8 @@ export default function Home({data}) {
            </div>
            {
              data.map((getCoin) =>{
-               return <Link href={`${getCoin.name.toLowerCase().replace(/\s+/g, '-')}`}>
-               <div className="cont " key={getCoin.id}>
+               return <Link href={getCoin.id}>
+               <div className="cont" key={getCoin.id}>
                  <div className="numbers rank">{getCoin.market_cap_rank}</div>
                       <div className="gg"><img src={getCoin.image} alt="Coin Logo" className="coinLogo" /> <div>{getCoin.name}</div></div>
                       <div className="numbers">{formatter.format(getCoin.current_price)}</div>
