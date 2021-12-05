@@ -189,3 +189,6 @@ font-size: 16px;
   font-size: 28px;
   line-height: 0.7;
 }
+.maxSupply{
+  transform: translateY(-2px) !important;
+}

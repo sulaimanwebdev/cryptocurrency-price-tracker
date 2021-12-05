@@ -87,8 +87,8 @@ const SingleCurrency = ({data}) => {
       
 
           <div className="firstGridFlex">
-          <div>Fully Diluted Valuation</div>
-          <div>{formatter.format(data.market_data.fully_diluted_valuation.usd)}</div>
+          <div className="maxSupply">Fully Diluted Valuation</div>
+          <div>{JSON.stringify(data.market_data.fully_diluted_valuation) === '{}' ? <span className="infityLogo">-</span> : formatter.format(data.market_data.fully_diluted_valuation.usd)}</div>
           </div>
 
 
@@ -99,7 +99,7 @@ const SingleCurrency = ({data}) => {
 
           
           <div className="firstGridFlex">
-          <div>Max Supply</div>
+          <div className="maxSupply">Max Supply</div>
           <div>{data.market_data.max_supply == null ? <span className="infityLogo">∞</span> : data.market_data.max_supply.toLocaleString()} </div>
           </div>
 
