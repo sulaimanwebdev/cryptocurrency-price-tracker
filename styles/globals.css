@@ -149,3 +149,43 @@ a {
   font-size: 24px;
   font-weight: normal;
 }
+
+
+.singleGrid1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.firstGridFlex{
+  display: flex;
+align-items: baseline;
+  justify-content: space-between;
+background-color: rgb(100, 115, 253);
+padding: 12px 15px;
+border-radius: 10px;
+color: white;
+font-size: 16px;
+}
+
+.hours24firstflex{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+}
+.signs{
+  font-size: 20px;
+  display: inline;
+}
+
+.infityLogo{
+  font-size: 28px;
+  line-height: 0.7;
+}

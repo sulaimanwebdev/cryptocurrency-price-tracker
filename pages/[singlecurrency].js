@@ -72,8 +72,63 @@ const SingleCurrency = ({data}) => {
          <div className="priceSingle">{formatter.format(data.market_data.current_price.usd)}</div>
 
          <div className="singleGrid1">
-          <div>{data.market_cap}</div>
+
+          <div className="firstGridFlex">
+          <div>Market Cap</div>
+          <div>{formatter.format(data.market_data.market_cap.usd)}</div>
+          </div>
+
+
+          <div className="firstGridFlex">
+          <div>Circulating Supply</div>
+          <div>{data.market_data.circulating_supply.toLocaleString()}</div>
+          </div>
+
+      
+
+          <div className="firstGridFlex">
+          <div>Fully Diluted Valuation</div>
+          <div>{formatter.format(data.market_data.fully_diluted_valuation.usd)}</div>
+          </div>
+
+
+          <div className="firstGridFlex">
+          <div>Total Supply</div>
+          <div>{data.market_data.total_supply.toLocaleString()}</div>
+          </div>
+
+          
+          <div className="firstGridFlex">
+          <div>Max Supply</div>
+          <div>{data.market_data.max_supply == null ? <span className="infityLogo">∞</span> : data.market_data.max_supply.toLocaleString()} </div>
+          </div>
+
+
+          <div className="hours24firstflex" style={data.market_data.price_change_percentage_24h_in_currency.usd > 0 ? { backgroundColor: 'rgb(5, 212, 5)'} : { backgroundColor: 'rgb(252, 93, 93)' }}>
+          <div>24 Hours Price Change</div>
+          <div><div className="signs">{data.market_data.price_change_percentage_24h_in_currency.usd > 0 ? "+" : "-"}</div> {Math.abs(data.market_data.price_change_percentage_24h_in_currency.usd).toFixed(1)} %</div>
+          </div>
+
+
+
+
+
          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
          </div>
            
