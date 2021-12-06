@@ -189,6 +189,60 @@ font-size: 16px;
   font-size: 28px;
   line-height: 0.7;
 }
-.maxSupply{
-  transform: translateY(-2px) !important;
+
+
+
+.priceChangeGrid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  max-width: 1000px;
+  border: 1px solid rgba(209, 209, 209, 0.801);
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.topBarPriceChange{
+  padding: 10px 0px;
+  background-color: rgba(209, 209, 209, 0.699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1.5px solid silver;
+  border-right: 1.5px solid silver;
+
+}
+
+.topBarPriceChangeA{
+  border-top-left-radius: 8px;
+  border-left: none;
+}
+
+.topBarPriceChangeL{
+  border-top-right-radius: 8px;
+  border-right: none;
+
+}
+
+.bottomPriceChange{
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1.5px solid silver;
+  border-right: 1.5px solid silver;
+}
+
+.bottomPriceChangeA{
+  border-top-left-radius: 8px;
+  border-left: none;
+
+}
+
+
+
+.bottomPriceChangeL{
+  border-left: 1.5px solid silver !important;
+  border-right: 0 !important;
+
 }

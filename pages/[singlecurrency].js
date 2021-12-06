@@ -87,7 +87,7 @@ const SingleCurrency = ({data}) => {
       
 
           <div className="firstGridFlex">
-          <div className="maxSupply">Fully Diluted Valuation</div>
+          <div >Fully Diluted Valuation</div>
           <div>{JSON.stringify(data.market_data.fully_diluted_valuation) === '{}' ? <span className="infityLogo">-</span> : formatter.format(data.market_data.fully_diluted_valuation.usd)}</div>
           </div>
 
@@ -99,8 +99,8 @@ const SingleCurrency = ({data}) => {
 
           
           <div className="firstGridFlex">
-          <div className="maxSupply">Max Supply</div>
-          <div>{data.market_data.max_supply == null ? <span className="infityLogo">∞</span> : data.market_data.max_supply.toLocaleString()} </div>
+          <div >Max Supply</div>
+          <div>{data.market_data.max_supply == null ? <span className="infityLogo">-</span> : data.market_data.max_supply.toLocaleString()} </div>
           </div>
 
 
@@ -110,11 +110,28 @@ const SingleCurrency = ({data}) => {
           </div>
 
 
-
-
-
          </div>
 
+
+
+         {/* style={data.market_data.price_change_percentage_1h_in_currency.usd > 0 ? { color: 'rgb(5, 212, 5)'} : { color: 'rgb(252, 93, 93)' }} */}
+<div className="priceChangeGrid">
+  <div className="topBarPriceChange topBarPriceChangeA">1H</div>
+  <div className="topBarPriceChange">24H</div> 
+  <div className="topBarPriceChange">7D</div> 
+  <div className="topBarPriceChange">1M</div> 
+  <div className="topBarPriceChange">6M</div> 
+  <div className="topBarPriceChange topBarPriceChangeL">1Y</div> 
+   
+  <div className="bottomPriceChange bottomPriceChangeA" style={data.market_data.price_change_percentage_1h_in_currency.usd > 0 ? { color: 'rgb(5, 212, 5)'} : { color: 'rgb(252, 93, 93)' }} ><div className="signs">{data.market_data.price_change_percentage_1h_in_currency.usd > 0 ? "+" : "-"}</div> {Math.abs(data.market_data.price_change_percentage_1h_in_currency.usd).toFixed(1)} %</div>
+  <div className="bottomPriceChange"  style={data.market_data.price_change_percentage_24h_in_currency.usd > 0 ? { color: 'rgb(5, 212, 5)'} : { color: 'rgb(252, 93, 93)' }} ><div className="signs">{data.market_data.price_change_percentage_24h_in_currency.usd > 0 ? "+" : "-"}</div> {Math.abs(data.market_data.price_change_percentage_24h_in_currency.usd).toFixed(1)} %</div>
+  <div className="bottomPriceChange"  style={data.market_data.price_change_percentage_7d_in_currency.usd > 0 ? { color: 'rgb(5, 212, 5)'} : { color: 'rgb(252, 93, 93)' }}><div className="signs">{data.market_data.price_change_percentage_7d_in_currency.usd > 0 ? "+" : "-"}</div> {Math.abs(data.market_data.price_change_percentage_7d_in_currency.usd).toFixed(1)} %</div>
+  <div className="bottomPriceChange" style={data.market_data.price_change_percentage_30d_in_currency.usd > 0 ? { color: 'rgb(5, 212, 5)'} : { color: 'rgb(252, 93, 93)' }}><div className="signs">{data.market_data.price_change_percentage_30d_in_currency.usd > 0 ? "+" : "-"}</div> {Math.abs(data.market_data.price_change_percentage_30d_in_currency.usd).toFixed(1)} %</div>
+  <div className="bottomPriceChange" style={data.market_data.price_change_percentage_200d_in_currency.usd > 0 ? { color: 'rgb(5, 212, 5)'} : { color: 'rgb(252, 93, 93)' }}><div className="signs">{data.market_data.price_change_percentage_200d_in_currency.usd > 0 ? "+" : "-"}</div> {Math.abs(data.market_data.price_change_percentage_200d_in_currency.usd).toFixed(1)} %</div>
+  <div className="bottomPriceChange bottomPriceChangeL" style={data.market_data.price_change_percentage_1y_in_currency.usd > 0 ? { color: 'rgb(5, 212, 5)'} : { color: 'rgb(252, 93, 93)' }}><div className="signs">{data.market_data.price_change_percentage_1y_in_currency.usd > 0 ? "+" : "-"}</div> {Math.abs(data.market_data.price_change_percentage_1y_in_currency.usd).toFixed(1)} %</div>
+
+
+</div>
 
 
 
