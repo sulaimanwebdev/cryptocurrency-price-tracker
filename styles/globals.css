@@ -197,14 +197,14 @@ font-size: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   max-width: 1000px;
-  border: 1px solid rgba(209, 209, 209, 0.801);
+  border: 1px solid rgb(219, 219, 219);
   border-radius: 8px;
   margin-top: 40px;
 }
 
 .topBarPriceChange{
   padding: 10px 0px;
-  background-color: rgba(209, 209, 209, 0.699);
+  background-color: rgb(243, 243, 243);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,5 +244,60 @@ font-size: 16px;
 .bottomPriceChangeL{
   border-left: 1.5px solid silver !important;
   border-right: 0 !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+.secondHeading{
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+
+
+
+.linksCont{
+  max-width: 370px;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+  
+}
+.offilinkCont{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 8px;
+  border: 2px solid silver;
+  border-radius: 8px;
+  padding: 5px;
+
+  
+}
+
+
+.actualLInk{
+  padding: 5px 8px;
+  background-color: rgba(211, 211, 255, 0.733);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.actualLInk:hover{
+  background-color: rgba(211, 211, 255, 0.959);
 
 }

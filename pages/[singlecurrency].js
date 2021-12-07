@@ -87,20 +87,20 @@ const SingleCurrency = ({data}) => {
       
 
           <div className="firstGridFlex">
-          <div >Fully Diluted Valuation</div>
+          <div style={JSON.stringify(data.market_data.fully_diluted_valuation) === '{}' ? {transform: 'translateY(-3px)' } : { transform: 'translateY(0)' }}>Fully Diluted Valuation</div>
           <div>{JSON.stringify(data.market_data.fully_diluted_valuation) === '{}' ? <span className="infityLogo">-</span> : formatter.format(data.market_data.fully_diluted_valuation.usd)}</div>
           </div>
 
 
           <div className="firstGridFlex">
-          <div>Total Supply</div>
-          <div>{data.market_data.total_supply.toLocaleString()}</div>
+          <div style={data.market_data.total_supply == null ? {transform: 'translateY(-3px)' } : { transform: 'translateY(0)' }}>Total Supply</div>
+          <div>{data.market_data.total_supply == null ? <span className="infityLogo">∞</span> : data.market_data.total_supply.toLocaleString()}</div>
           </div>
 
           
           <div className="firstGridFlex">
-          <div >Max Supply</div>
-          <div>{data.market_data.max_supply == null ? <span className="infityLogo">-</span> : data.market_data.max_supply.toLocaleString()} </div>
+          <div style={data.market_data.max_supply == null ? {transform: 'translateY(-3px)' } : { transform: 'translateY(0)' }} >Max Supply</div>
+          <div>{data.market_data.max_supply == null ? <span className="infityLogo">∞</span> : data.market_data.max_supply.toLocaleString()} </div>
           </div>
 
 
@@ -136,7 +136,12 @@ const SingleCurrency = ({data}) => {
 
 
 
+ <div className="secondHeading">Useful Links</div>
 
+<div className="linksCont">
+ 
+  <div className="offilinkCont">Official Website <a href={data.links.homepage[0]} className="actualLInk">{data.links.homepage[0].replace(/^https?:\/\//, '')}</a></div>
+</div>
 
 
 
