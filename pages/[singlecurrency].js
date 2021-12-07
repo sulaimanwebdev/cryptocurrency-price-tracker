@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // {`${getCoin.name.replace(/\s+/g, '-')}`}
 export async function getStaticPaths() {
@@ -138,13 +139,22 @@ const SingleCurrency = ({data}) => {
 
  <div className="secondHeading">Useful Links</div>
 
-<div className="linksCont">
- 
-  <div className="offilinkCont">Official Website <a href={data.links.homepage[0]} className="actualLInk">{data.links.homepage[0].replace(/^https?:\/\//, '')}</a></div>
+<div className="linksCont" style={{marginBottom: '5px'}}>
+  <div className="offilinkCont">Official Website <a target="_blank" href={data.links.homepage[0]} className="actualLInk">{data.links.homepage[0].replace(/^https?:\/\//, '')}</a></div>
 </div>
 
 
+<div className="linksCont">
 
+<a target="_blank" href={data.links.blockchain_site[0]} className="actualLInk">{data.links.blockchain_site[0].replace(/^https?:\/\//, '')}</a>
+<a target="_blank" href={data.links.blockchain_site[1]} className="actualLInk">{data.links.blockchain_site[1].replace(/^https?:\/\//, '')}</a>
+<a target="_blank" href={data.links.official_forum_url[0]} className="actualLInk">{data.links.official_forum_url[0].replace(/^https?:\/\//, '')}</a>
+<a target="_blank" href={`https://twitter.com/${data.links.twitter_screen_name}`} className="actualLInk"><FontAwesomeIcon icon={['fab', 'twitter']} /> Twitter</a>
+<a target="_blank" href={`https://github.com/${data.links.repos_url.github[0]}`} className="actualLInk"><FontAwesomeIcon icon={['fab', 'github']} /> Github</a>
+
+
+
+</div>
 
 
 
