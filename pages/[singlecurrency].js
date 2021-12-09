@@ -68,11 +68,11 @@ const SingleCurrency = ({data}) => {
 
     return (
         <>
-         <div className="singleCurrencyCont" style={data.name === 'Solana' ? {paddingBottom: '30px'} : {paddingBottom: '0px'}}>
-         <div onClick={goBack} className="goBackBtn" title="Go back"><svg aria-hidden="true" width="16px" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="white" d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"></path></svg></div>
+         <div className="singleCurrencyCont" style={data.description.en === '' ? {paddingBottom: '30px'} : {paddingBottom: '0px'}}>
+         <div onClick={goBack} className="goBackBtn" title="Go back"><svg aria-hidden="true" width="16px" focusable="false" data-prefix="fas" data-icon="chevron-left" className="svg-inline--fa fa-chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="white" d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"></path></svg></div>
          <div className="rankSingleCurrency" >{`Rank #${data.market_cap_rank}`}</div>
          <div className="singleFlex">
-        <div> <img src={data.image.large} alt="" /></div>
+        <div className="singleImage" > <img src={data.image.large} alt="" /></div>
          <div className="singleName">{data.name} <span className="singleSymbol">({data.symbol})</span></div>
          </div>
          <div className="priceSingle">{formatter.format(data.market_data.current_price.usd)}</div>
@@ -163,7 +163,7 @@ const SingleCurrency = ({data}) => {
 
 
 
-<div className="description" style={data.name === 'Solana' ? {display: 'none'} : {display: 'block'}}>
+<div className="description" style={data.description.en === '' ? {display: 'none'} : {display: 'block'}}>
   <div className="Hdescription">About ({data.name})</div>
   {/* for all coins description */}
   <p style={data.name === 'Bitcoin' || data.name === 'Ethereum' || data.name === 'Binance Coin' ? {display: 'none'} : {display:'block'}}>{data.description.en}</p>

@@ -24,7 +24,7 @@ a {
   max-width: 1700px;
   margin: 40px auto 0 auto;
   margin-top: 40px;
-  min-width: 1000px;
+  min-width: 800px;
   width: 100%;
 
 }
@@ -340,4 +340,109 @@ font-size: 16px;
 }
 .goBackBtn:hover{
   background-color: rgb(84, 84, 247);
+}
+
+
+
+
+
+
+
+
+@media (max-width:794px){
+  .singleGrid1{
+    grid-template-columns: 1fr;
+  }
+
+  .topBarPriceChange{
+    font-size: 15px;
+  }
+
+  .bottomPriceChange{
+    font-size: 15px;
+  }
+}
+
+@media (max-width:556px){
+  .firstGridFlex{
+    font-size: 14px;
+  }
+  .hours24firstflex{
+    font-size: 14px;
+  }
+
+
+  .topBarPriceChange{
+    font-size: 13px;
+  }
+
+  .bottomPriceChange{
+    font-size: 13px;
+  }
+
+  .signs{
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width:464px){
+
+  .topBarPriceChange{
+    font-size: 10px;
+  }
+
+  .bottomPriceChange{
+    font-size: 10px;
+  }
+
+  .signs{
+    font-size: 10px;
+  }
+}
+
+
+@media (max-width:400px){
+  .firstGridFlex{
+    font-size: 13px;
+  }
+
+  
+.goBackBtn{
+  width: 40px;
+  height: 40px;
+}
+
+.goBackBtn svg{
+  width: 10px;
+}
+}
+
+@media (max-width:430px){
+  .singleName{
+    font-size: 26px;
+    margin-top: 15px;
+  }
+
+
+  .singleSymbol{
+    font-size: 26px;
+  }
+
+  .singleImage img{
+    width: 60px;
+  }
+}
+
+@media (max-width:910px){
+  .gg{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  
 }
