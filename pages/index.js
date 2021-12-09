@@ -64,8 +64,8 @@ export default function Home({data}) {
            </div>
            {
              data.map((getCoin) =>{
-               return <Link href={getCoin.id}>
-               <div className="cont" key={getCoin.id}>
+               return <Link href={getCoin.id} key={getCoin.id}>
+               <div className="cont">
                  <div className="numbers rank">{getCoin.market_cap_rank}</div>
                       <div className="gg"><img src={getCoin.image} alt="Coin Logo" className="coinLogo" /> <div>{getCoin.name}</div></div>
                       <div className="numbers">{formatter.format(getCoin.current_price)}</div>
