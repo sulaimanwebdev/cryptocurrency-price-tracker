@@ -20,10 +20,9 @@ a {
 
 .main{
   width: 100%;
-  padding: 0 30px;
   max-width: 1700px;
-  margin: 40px auto 0 auto;
-  margin-top: 40px;
+  margin: 0 auto;
+overflow-x: auto;
   min-width: 800px;
   width: 100%;
 
