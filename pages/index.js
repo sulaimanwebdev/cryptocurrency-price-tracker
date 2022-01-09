@@ -1,18 +1,28 @@
-
 import Head from 'next/head'
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 // {`${getCoin.name.toLowerCase().replace(/\s+/g, '-')}`}
 
-export async function getStaticProps() {
-  const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
-  const data = await res.json()
 
-  return {
-    props: { data }
+
+export default function Home() {
+
+  const [getdata, setgetdata] = useState([]);
+
+
+
+  const fetchData = async () => {
+           const response = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false");
+           setgetdata(await response.json());
+
   }
-}
 
-export default function Home({data}) {
+
+          useEffect(() => {
+            fetchData();
+
+            }, []);
+
 
   const formatCash = n => {
     if (n < 1e3) return n;
@@ -63,7 +73,7 @@ export default function Home({data}) {
 
            </div>
            {
-             data.map((getCoin) =>{
+             getdata.map((getCoin) =>{
                return <Link href={getCoin.id} key={getCoin.id}>
                <div className="cont">
                  <div className="numbers rank">{getCoin.market_cap_rank}</div>
